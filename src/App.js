@@ -1,24 +1,11 @@
 import React from 'react'
 import './App.css'
-import SiteMenu from './components/SiteMenu'
-import AboutPage from './components/AboutPage'
+import SiteFrame from './components/SiteFrame'
 
 function App () {
   return (
     <div className="App">
-      <header className="App-header">
-        Alicia Wilder
-      </header>
-
-      <menu className='app-menu'>
-
-        <SiteMenu />
-      </menu>
-
-      <content className='app-content'>
-
-        <AboutPage />
-      </content>
+      <SiteFrame/>
     </div>
   )
 }

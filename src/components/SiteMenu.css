@@ -1,18 +1,25 @@
+@import '/src/assets/animations.css';
+
 
 .menu-wrapper {
   display: flex;
   gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-item {
   color: orange;
   cursor: pointer;
   font-weight: bolder;
-  font-size: larger;
+  font-size: xx-large;
+  padding: 1rem;
 
 }
 
-.menu-item:hover:after {
-  content: 'CLICK IT';
-  color: red;
+.menu-item:hover {
+  background-color: cornflowerblue;
+  
+  /* animation: App-logo-spin infinite 20s linear; */
 }
