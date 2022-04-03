@@ -2,15 +2,10 @@
 
 
 .menu-wrapper {
-  display: flex;
-  gap: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .menu-item {
-  color: orange;
+  color: var(--fgcolor-primary);
   cursor: pointer;
   font-weight: bolder;
   font-size: xx-large;
@@ -19,7 +14,6 @@
 }
 
 .menu-item:hover {
-  background-color: cornflowerblue;
+  background-color: var(--fgcolor-secondary);
   
-  /* animation: App-logo-spin infinite 20s linear; */
 }

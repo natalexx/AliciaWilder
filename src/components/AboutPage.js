@@ -1,5 +1,4 @@
 import React from 'react'
-import '../assets/theme.css'
 import './AboutPage.css'
 
 function AboutPage () {

@@ -1,0 +1,7 @@
+html {
+  --fgcolor1:cornflowerblue;
+  --fgcolor2: hsl(270deg 75% 60%);
+  --bgcolor1: #ddd;
+  --bgcolor2: #fff;
+  --gutterbgcolor: cornflowerblue;
+}

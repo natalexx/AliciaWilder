@@ -1,28 +1,60 @@
 
 import React from 'react'
-import './SiteFrame.css'
+import SiteHeader from './SiteHeader'
 import SiteMenu from './SiteMenu'
 import AboutPage from './AboutPage'
+import styled from 'styled-components'
 
-function SiteFrame () {
-  return (
-    <div className='site-frame'>
-      <header className="app-header">
-        <div className='header-left'>
-          <div className='name'>Alicia Wilder</div>
-          <sub>Happy endings for women with &quot;issues&quot;</sub>
-        </div>
-        <menu className='app-menu'>
-          <SiteMenu />
-        </menu>
+const Frame = styled.div`
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "logo  menu"
+    "content  content";
+  justify-items: stretch;
+  height: 100vh;
+  margin: 0 3rem;
+  `
+const Content = styled.div`
+    flex-grow:2;
+    height: 100%;
+    grid-area: content;
+    background-color: var(--bgcolor2);
+  `
 
-      </header>
+const Header = styled.div`
+  grid-area: logo;
+`
+const Menu = styled.div`
+  background-color: var(--bgcolor1);
+  grid-area: menu;
+  justify-content: center;
+  display: flex;
+  align-items:stretch;
+`
+class SiteFrame extends React.Component {
+  constructor () {
+    super()
+    this.state = {}
+  }
 
-      <div className='app-content'>
-        <AboutPage />
-      </div>
-    </div>
-  )
+  render () {
+    return (
+      <Frame>
+        <Header>
+          <SiteHeader className='logo' />
+        </Header>
+        <Menu>
+          <SiteMenu className='menu' />
+        </Menu>
+        <Content>
+          <AboutPage />
+        </Content>
+
+      </Frame>
+    )
+  }
 }
 
 export default SiteFrame
