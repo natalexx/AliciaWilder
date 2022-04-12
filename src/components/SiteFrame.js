@@ -3,7 +3,12 @@ import React from 'react'
 import SiteHeader from './SiteHeader'
 import SiteMenu from './SiteMenu'
 import AboutPage from './AboutPage'
+import BooksPage from './BooksPage'
 import styled from 'styled-components'
+import {
+  Routes,
+  Route
+} from 'react-router-dom'
 
 const Frame = styled.div`
   display: grid;
@@ -49,12 +54,13 @@ class SiteFrame extends React.Component {
           <SiteMenu className='menu' />
         </Menu>
         <Content>
-          <AboutPage />
+          <Routes>
+            <Route path="/" element={<AboutPage />}/>
+            <Route path="books" element={<BooksPage />}/>
+          </Routes>
         </Content>
-
       </Frame>
     )
   }
 }
-
 export default SiteFrame

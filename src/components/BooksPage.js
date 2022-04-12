@@ -9,24 +9,18 @@ const BookCard = styled.div`
   background-color: orange;
 `
 
-class BooksPage extends React.Component {
-  constructor () {
-    super()
-    this.state = {}
-  }
-
-  render () {
-    return (
-      <>
-        <title>Books</title>
-        <BookCardGrid>
-          <BookCard></BookCard>
-          <BookCard></BookCard>
-          <BookCard></BookCard>
-        </BookCardGrid>
-      </>
-    )
-  }
+function BooksPage () {
+  return (
+    <div className='content-wrapper'>
+      Books page
+      <title>Books</title>
+      <BookCardGrid>
+        <BookCard>bookcard</BookCard>
+        <BookCard>bookcard 2</BookCard>
+        <BookCard>bookcard 3</BookCard>
+      </BookCardGrid>
+    </div>
+  )
 }
 
 export default BooksPage

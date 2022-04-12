@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import {
+  Link
+} from 'react-router-dom'
 
 const MenuWrapper = styled.div`
   display: flex;
@@ -24,14 +27,14 @@ const MenuItem = styled.div`
 `
 
 function SiteMenu () {
-  const blah = (blah) => {
-    console.log(blah)
-  }
-
   return (
     <MenuWrapper>
-      <MenuItem onClick={() => blah('About')}>About</MenuItem>
-      <MenuItem onClick={() => blah('Books')}>Books</MenuItem>
+      <MenuItem>
+        <Link to="/">About</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link to='/books'>Books</Link>
+      </MenuItem>
     </MenuWrapper>
   )
 }

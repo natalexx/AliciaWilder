@@ -3,6 +3,7 @@ import './App.css'
 import SiteFrame from './components/SiteFrame'
 import styled from 'styled-components'
 import './assets/theme.css'
+import { BrowserRouter } from 'react-router-dom'
 
 const AppWrapper = styled.div`
   background-color: var(--gutterbgcolor);
@@ -11,9 +12,11 @@ const AppWrapper = styled.div`
 class App extends React.Component {
   render () {
     return (
-      <AppWrapper>
-        <SiteFrame />
-      </AppWrapper>
+      <BrowserRouter>
+        <AppWrapper>
+          <SiteFrame />
+        </AppWrapper>
+      </BrowserRouter>
     )
   }
 }
