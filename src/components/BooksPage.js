@@ -16,6 +16,7 @@ function BooksPage () {
         <BookCard
           blurbs={['My favourite book!', 'I was not prepared for the gratuitous sex scenes.']}
           links={[{ href: 'http://example.com', icon: 'https://icons.iconarchive.com/icons/bokehlicia/captiva/256/web-amazon-icon.png' }]}
+          image='/assets/images/CosplayCupidCoverWIP2.png'
         >
         </BookCard>
         <BookCard

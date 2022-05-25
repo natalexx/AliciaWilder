@@ -2,20 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  background-color: voilet;
   margin: 1rem;
   padding: 1rem;
-  width: 20rem;
 `
 
 const Cover = styled.div`
-  height: 25rem;
-  width: 100%;
   border: 3px solid black;
   box-shadow: 5px 3px 3px black;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  
+  img {
+    height: 35rem;
+
+  }
 `
 
 const Blurb = styled.div`
@@ -37,7 +38,7 @@ function BookCard (attributes) {
   return (
     <Wrapper>
       <Cover>
-        Your cover here
+        <img src={require('../assets/images/CosplayCupidCoverWIP2.png')}/>
       </Cover>
       {blurbs.map(blurb => (
         <Blurb key={blurb}>
